@@ -11,6 +11,7 @@ export const useValidator = (initialState, validation, fn) => {
             const noErrors = Object.keys(errores).length === 0;
 
             if (noErrors) {
+                console.log('pasa');
                 fn();
             }
 

@@ -10,15 +10,15 @@ import validarCrearCuenta from '../validator/validarCrearCuenta';
 
 import firebase from '../firebase';
 
+const initialState = {
+  nombre: '',
+  email: '',
+  password: ''
+};
+
 export default function CrearCuenta() {
 
-  const [ error, setError ] = useState(false);
-
-    const initialState = {
-      nombre: '',
-      email: '',
-      password: ''
-    };
+    const [ error, setError ] = useState(false);
 
     const {
       valores,
