@@ -10,6 +10,7 @@ import { Formulario, Campo, InputSubmit , Error} from '../components/ui/Formular
 
 import { useValidator } from '../hooks/useValidator';
 import validarCrearProducto from '../validator/validarCrearProducto';
+import { Error404 } from '../components/layout/404';
 
 const initialState = {
   nombre: '',
@@ -62,7 +63,12 @@ export default function CrearProducto() {
       descripcion,
       votos: 0,
       comentarios: [],
-      creado: Date.now()
+      creado: Date.now(),
+      creador: {
+        id: usuario.uid,
+        nombre: usuario.displayName 
+      },
+      haVotado: []
     };
 
     if(submitform) {
@@ -97,14 +103,17 @@ export default function CrearProducto() {
           .child(nombre)
           .getDownloadURL()
           .then(url => {
-            console.log(url);
             guardarUrlImagen(url);
           } );
   };
 
+
   return (
     <div>
       <Layout>
+         { 
+          !usuario ? <Error404 /> : (
+         
          <>
             <h1
               css={css`
@@ -129,7 +138,7 @@ export default function CrearProducto() {
                     <input 
                       type="text"
                       id="nombre"
-                      placeholder="Tu nombre"
+                      placeholder="Nombre del Producto"
                       name="nombre"
                       value={nombre}
                       onChange={handleChange}
@@ -216,6 +225,8 @@ export default function CrearProducto() {
 
             </Formulario>
          </>
+         )}
+
       </Layout>
     </div>
   )

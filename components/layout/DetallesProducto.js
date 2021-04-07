@@ -117,5 +117,7 @@ export const DetallesProducto = ({ producto }) => {
              </Votos>
          </Producto>
     )
-}
+};
+
+export default DetallesProducto;
  
