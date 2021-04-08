@@ -1,7 +1,7 @@
 import React from 'react';
-import { DetallesProducto } from '../components/layout/DetallesProducto';
 import { Layout } from '../components/layout/Layout';
 import useProductos from '../hooks/useProductos';
+import { DetallesProducto } from '../components/layout/DetallesProducto';
 
 export default function Home() {
 

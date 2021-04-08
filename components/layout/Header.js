@@ -26,6 +26,7 @@ const Logo = styled.p`
     font-weight: 700;
     font-family: 'Roboto Slab', serif;
     margin-right: 2rem;
+    margin-top: -5px;
 `;
 
 export const Header = () => {
