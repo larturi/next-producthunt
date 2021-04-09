@@ -14,6 +14,10 @@ const Producto = styled.li`
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #e1e1e1;
+
+    @media (max-width:768px) {
+        padding: 2rem;
+    }
 `;
 const DescripcionProducto = styled.div`
     flex: 0 1 600px;
@@ -83,6 +87,20 @@ const Votos = styled.div`
         font-size: 2rem;
         font-weight: 700;
     }
+
+    @media (max-width:768px) {
+        div {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+    }
+
 `;
 
 export const DetallesProducto = ({ producto }) => {

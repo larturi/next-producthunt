@@ -6,6 +6,7 @@ import { FirebaseContext } from '../../firebase'
 
 const Nav = styled.nav`
     padding-left: 2rem;
+    margin-top: 32px;
 
     a {
         font-size: 1.8rem;

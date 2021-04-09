@@ -53,7 +53,11 @@ export const Header = () => {
                     </Link>
                     
                     <Buscador />
-                    <Navbar />
+                </div>
+
+                <div>
+                <Navbar />
+
                 </div>
 
                 <div
@@ -68,6 +72,8 @@ export const Header = () => {
                                 <p
                                     css={css`
                                         margin-right: 2rem;
+                                        margin-top: -3px;
+                                        margin-left: 41px;
                                     `} 
                                 >
                                     Hola: { usuario.displayName }
